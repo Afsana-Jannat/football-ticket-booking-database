@@ -2,8 +2,8 @@ select match_id, fixture, base_ticket_price from Matches
 where tournament_category = 'Champions League' and match_status = 'Available';
 
 
-select user_id, full_name, email from users
-where full_name ILIKE 'Tanvir%' OR full_name ILIKE '%Haque%'
+select user_id, full_name, email from Users
+where full_name ILIKE 'Tanvir%' OR full_name ILIKE '%Haque%';
 
 
 select booking_id, user_id, match_id, coalesce(payment_status, 'Action Required') as systematic_status from Bookings
